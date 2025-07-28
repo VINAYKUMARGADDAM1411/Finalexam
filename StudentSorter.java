@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Student {
+class StudentList {
     String name;
     int marks;
 
-    public Student(String name, int marks) {
+    public StudentList(String name, int marks) {
         this.name = name;
         this.marks = marks;
     }
@@ -17,14 +17,14 @@ class Student {
 
 public class StudentSorter {
     public static void main(String[] args) {
-        List<Student> students = new ArrayList<>();
-        students.add(new Student("Vinay", 85));
-        students.add(new Student("Rakesh", 70));
-        students.add(new Student("Sai", 95));
+        List<StudentList> students = new ArrayList<>();
+        students.add(new StudentList("Vinay", 85));
+        students.add(new StudentList("Rakesh", 70));
+        students.add(new StudentList("Sai", 95));
 
         students.sort(Comparator.comparingInt(s -> s.marks));
 
-        for (Student s : students) {
+        for (StudentList s : students) {
             System.out.println(s);
         }
     }
